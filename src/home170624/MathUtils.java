@@ -40,4 +40,20 @@ public class MathUtils {
         }
         return result;
     }
+
+    public static boolean isFibonacci(int i) {
+        int n;
+        int first_fib = 0;
+        int second_fib = 1;
+        boolean result = false;
+
+        for ( int j = 0; j <= i; j++) {
+            n = first_fib + second_fib;
+            first_fib = second_fib;
+            second_fib = n;
+            if (n == i) {
+                result = true;
+            }
+        } return result;
+    }
 }

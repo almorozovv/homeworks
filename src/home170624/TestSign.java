@@ -18,5 +18,7 @@ public class TestSign {
 
         System.out.println(SimpleUnit.assertEquals(MathUtils.sign(Integer.MAX_VALUE), 1) );
         System.out.println(SimpleUnit.assertNotEquals(MathUtils.sign(Integer.MAX_VALUE), -1) );
+
+
     }
 }

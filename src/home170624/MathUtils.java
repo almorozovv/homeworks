@@ -1,7 +1,5 @@
 package home170624;
 
-//check git access
-
 public class MathUtils {
     public static int sign(int i) {
         int result = 0;

@@ -2,7 +2,7 @@ package home170707;
 
 import homettd.Asserts;
 
-public class home170707 {
+public class StringMethodsPractice {
 
     public static void main(String[] args) {
 
@@ -28,6 +28,12 @@ public class home170707 {
         System.out.println("-------------------");
         System.out.println("Before: " + "'" + s5 + "'");
         System.out.println("After: " + "'" + trim(s5) + "'");
+
+        System.out.println("-------------------");
+        System.out.println(s5.replace(' ', 'G' ));
+        System.out.println(myReplace(s5, ' ', 'G'));
+
+
     }
 
     private static String trim(String s) {
@@ -60,6 +66,23 @@ public class home170707 {
         s = s.substring(first, last + 1);
 
         return s;
+    }
+
+    private static String myReplace(String s, char oldChar, char newChar) {
+        StringBuilder result = new StringBuilder();
+
+        if (oldChar == newChar) {
+            result.append(oldChar);
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == oldChar) {
+                result.append(newChar);
+            } else {
+                result.append(s.charAt(i));
+            }
+        }
+
+        return result.toString();
     }
 
     private static boolean hasNoTrailingOrLeadingSpaces(String s) {

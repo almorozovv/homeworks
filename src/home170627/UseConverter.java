@@ -3,7 +3,7 @@ package home170627;
 public class UseConverter {
 
     public static void main(String[] args) {
-        //Integer.toBinaryString(11);
+        //KInteger.toBinaryString(11);
         System.out.println(NumberSystemConverter.toBinaryString(11));
         System.out.println(NumberSystemConverter.toBinaryString(52));
         System.out.println(NumberSystemConverter.toBinaryString(769));

@@ -54,7 +54,26 @@ public class StringLinkedList {
 
     public String remove(int index) {
         // TODO  Home work
-        return null;
+        String result = null;
+
+        if (size > 0) {
+            if (index == 0) {
+                result = first.value;
+                Node newfirst = first.next;
+
+                first.value = null;
+                first.next = null;
+                first = newfirst;
+                size--;
+            }
+
+            if (index > 0) {
+
+            }
+        }
+
+
+        return result;
     }
 
     @Override

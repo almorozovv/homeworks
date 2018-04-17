@@ -9,7 +9,7 @@ public class StringLinkedList {
     int size;  // 0
 
     public void add(String value) {
-        Node node = new Node(value, null);
+        Node node = new Node(value,null);
 
         if (first == null) {
             first = node;
@@ -67,8 +67,20 @@ public class StringLinkedList {
                 size--;
             }
 
-            if (index > 0) {
 
+            if (index > 0) {
+                int counter = 0;
+                Node prev = null;
+                Node current = first;
+
+                while (counter != index) {
+                    prev = current;
+                    current = current.next;
+                    counter++;
+                }
+                result = current.value;
+                prev.next = current.next;
+                size--;
             }
         }
 
